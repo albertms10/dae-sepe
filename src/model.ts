@@ -38,7 +38,7 @@ export class Representante extends Persona implements Entidad {
   }
 }
 
-class DatosActividad {
+export class DatosActividad {
   Coeficiente_Actividad: string;
   Periodo_Actividad: PeriodoActividad;
 
@@ -51,23 +51,23 @@ class DatosActividad {
   }
 }
 
-class PeriodoActividad {
+export class PeriodoActividad {
   Fecha_Inicio_Periodo: string;
   Fecha_Fin_Periodo: string;
-  Intervalos_Actividad: IntervaloActividad[];
+  Intervalo_Actividad: IntervaloActividad[];
 
   constructor(
     Fecha_Inicio_Periodo: string,
     Fecha_Fin_Periodo: string,
-    Intervalos_Actividad: IntervaloActividad[]
+    Intervalo_Actividad: IntervaloActividad[]
   ) {
     this.Fecha_Inicio_Periodo = Fecha_Inicio_Periodo;
     this.Fecha_Fin_Periodo = Fecha_Fin_Periodo;
-    this.Intervalos_Actividad = Intervalos_Actividad;
+    this.Intervalo_Actividad = Intervalo_Actividad;
   }
 }
 
-class IntervaloActividad {
+export class IntervaloActividad {
   Fecha_Inicio: string;
   Fecha_Fin: string;
   Codigo_Actividad: string;
