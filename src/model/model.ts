@@ -21,9 +21,9 @@ export class Empresa implements Entidad {
 }
 
 export class Representante implements Entidad {
+  CIF_NIF: string;
   Nombre: string;
   Apellido1: string;
-  CIF_NIF: string;
 
   constructor(CIF_NIF: string, Nombre: string, Apellido1: string) {
     this.CIF_NIF = CIF_NIF;
