@@ -1,0 +1,18 @@
+{
+  "name": "jornadas-equivalentes-sepe",
+  "version": "0.1.0",
+  "description": "Jornadas equivalentes SEPE",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "cd src && tsc && node ../dist/index.js"
+  },
+  "author": "Albert Mañosa",
+  "license": "MIT",
+  "devDependencies": {
+    "tslint": "^5.12.1",
+    "typescript": "^4.0.1-rc"
+  },
+  "dependencies": {
+    "xml-js": "^1.6.11"
+  }
+}
