@@ -1,7 +1,7 @@
 {
-  "name": "jornadas-equivalentes-sepe",
+  "name": "dae-sepe",
   "version": "0.1.0",
-  "description": "Jornadas equivalentes SEPE",
+  "description": "Días de actividad equivalente — SEPE",
   "main": "dist/index.js",
   "scripts": {
     "start": "cd src && tsc && node ../dist/index.js"
