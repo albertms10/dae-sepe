@@ -1,5 +1,8 @@
 import * as XML from "xml:schema";
 
+/**
+ * Prepara el objecto de Datos con los atributos necesarios para su conversión a XML.
+ */
 export default (Datos: XML.Datos): XML.Schema => {
   const _declaration: XML.AttributesDeclaration = {
     _attributes: {
