@@ -14,9 +14,9 @@ declare module "xml:schema" {
   }
 
   interface Datos {
-    Datos_Representante: import("./model").Representante;
-    Datos_Empresa: import("./model").Empresa;
-    Datos_Trabajador: import("./model").Trabajador;
+    Datos_Representante: import("../model/model").Representante;
+    Datos_Empresa: import("../model/model").Empresa;
+    Datos_Trabajador: import("../model/model").Trabajador;
   }
 
   interface Comunicacion_Unica extends AttributesComunicacion_Unica, Datos {}
