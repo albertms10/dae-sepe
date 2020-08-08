@@ -1,4 +1,6 @@
-class Entidad {
+import * as Codigos from "./codigos";
+
+abstract class Entidad {
   CIF_NIF: string;
 
   constructor(CIF_NIF: string) {
@@ -6,35 +8,27 @@ class Entidad {
   }
 }
 
-class Persona {
-  Nombre?: string;
-  Apellido1?: string;
-
-  constructor(Nombre?: string, Apellido1?: string) {
-    this.Nombre = Nombre;
-    this.Apellido1 = Apellido1;
-  }
-}
-
-export class Empresa extends Entidad {
+export class Empresa implements Entidad {
+  CIF_NIF: string;
   CCC: string;
   Numero_ERE: string;
 
   constructor(CIF_NIF: string, CCC: string, Numero_ERE: string) {
-    super(CIF_NIF);
-
+    this.CIF_NIF = CIF_NIF;
     this.CCC = CCC;
     this.Numero_ERE = Numero_ERE;
   }
 }
 
-export class Representante extends Persona implements Entidad {
+export class Representante implements Entidad {
+  Nombre: string;
+  Apellido1: string;
   CIF_NIF: string;
 
-  constructor(CIF_NIF: string, Nombre?: string, Apellido1?: string) {
-    super(Nombre, Apellido1);
-
+  constructor(CIF_NIF: string, Nombre: string, Apellido1: string) {
     this.CIF_NIF = CIF_NIF;
+    this.Nombre = Nombre;
+    this.Apellido1 = Apellido1;
   }
 }
 
@@ -70,12 +64,12 @@ export class PeriodoActividad {
 export class IntervaloActividad {
   Fecha_Inicio: string;
   Fecha_Fin: string;
-  Codigo_Actividad: string;
+  Codigo_Actividad: Codigos.Periodos_Actividad;
 
   constructor(
     Fecha_Inicio: string,
     Fecha_Fin: string,
-    Codigo_Actividad: string
+    Codigo_Actividad: Codigos.Periodos_Actividad
   ) {
     this.Fecha_Inicio = Fecha_Inicio;
     this.Fecha_Fin = Fecha_Fin;
@@ -83,18 +77,11 @@ export class IntervaloActividad {
   }
 }
 
-export class Trabajador extends Persona {
+export class Trabajador {
   NIF_NIE: string;
   Datos_Actividad: DatosActividad;
 
-  constructor(
-    NIF_NIE: string,
-    Datos_Actividad: DatosActividad,
-    Nombre?: string,
-    Apellido1?: string
-  ) {
-    super(Nombre, Apellido1);
-
+  constructor(NIF_NIE: string, Datos_Actividad: DatosActividad) {
     this.NIF_NIE = NIF_NIE;
     this.Datos_Actividad = Datos_Actividad;
   }
