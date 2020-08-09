@@ -34,6 +34,6 @@ declare module "xml:schema" {
     Representante: import("../model/model").Representante;
     Empresa: import("../model/model").Empresa;
     Trabajador: import("../model/model").Trabajador & DatosJornada;
-    Mes: import("../model/codigos").Meses;
+    Mes: keyof typeof import("../model/codigos").Meses;
   }
 }
