@@ -26,21 +26,15 @@ declare module "xml:schema" {
     Comunicacion_Unica: Comunicacion_Unica;
   }
 
+  interface DatosJornada {
+    Jornada_Habitual: number;
+    Coeficiente_Actividad: string;
+  }
+
   interface Info {
-    Representante: {
-      CIF_NIF: string;
-      Nombre: string;
-      Apellido1: string;
-    };
-    Empresa: {
-      CIF_NIF: string;
-      CCC: string;
-      Numero_ERE: string;
-    };
-    Trabajador: {
-      NIF_NIE: string;
-      Jornada_Habitual: 7.1;
-    };
+    Representante: import("../model/model").Representante;
+    Empresa: import("../model/model").Empresa;
+    Trabajador: import("../model/model").Trabajador & DatosJornada;
     Mes: import("../model/codigos").Meses;
   }
 }
