@@ -25,4 +25,22 @@ declare module "xml:schema" {
     _declaration: AttributesDeclaration;
     Comunicacion_Unica: Comunicacion_Unica;
   }
+
+  interface Info {
+    Representante: {
+      CIF_NIF: string;
+      Nombre: string;
+      Apellido1: string;
+    };
+    Empresa: {
+      CIF_NIF: string;
+      CCC: string;
+      Numero_ERE: string;
+    };
+    Trabajador: {
+      NIF_NIE: string;
+      Jornada_Habitual: 7.1;
+    };
+    Mes: import("../model/codigos").Meses;
+  }
 }
