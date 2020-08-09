@@ -8,8 +8,12 @@ import { prepareXML } from "./index";
  * Genera y escribe un archivo XML con los datos proporcionados.
  */
 export default (Datos: XML.Datos) => {
+  const outputPath = path.resolve(__dirname, "../../../output");
+
+  if (!fs.existsSync(outputPath)) fs.mkdirSync(outputPath);
+
   fs.writeFile(
-    path.resolve(__dirname, "../../out", "output.xml"),
+    path.resolve(outputPath, "output.xml"),
     js2xml(prepareXML(Datos), {
       compact: true,
       fullTagEmptyElement: true,
