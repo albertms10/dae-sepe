@@ -22,3 +22,18 @@ export const enum Periodos_Actividad {
   /** Vacaciones anuales retribuidas (excluidas del pago de la prestación) */
   "06" = "06",
 }
+
+export const enum Meses {
+  "enero",
+  "febrero",
+  "marzo",
+  "abril",
+  "mayo",
+  "junio",
+  "julio",
+  "agosto",
+  "septiembre",
+  "octubre",
+  "noviembre",
+  "diciembre",
+}
