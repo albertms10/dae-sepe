@@ -23,17 +23,17 @@ export const enum Periodos_Actividad {
   "06" = "06",
 }
 
-export const enum Meses {
-  "enero",
-  "febrero",
-  "marzo",
-  "abril",
-  "mayo",
-  "junio",
-  "julio",
-  "agosto",
-  "septiembre",
-  "octubre",
-  "noviembre",
-  "diciembre",
+export enum Meses {
+  enero,
+  febrero,
+  marzo,
+  abril,
+  mayo,
+  junio,
+  julio,
+  agosto,
+  septiembre,
+  octubre,
+  noviembre,
+  diciembre,
 }
