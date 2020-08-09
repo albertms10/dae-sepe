@@ -1,3 +1,4 @@
+import { generateTSV } from "../helpers";
 import * as Codigos from "../model/codigos";
 import * as Model from "../model/model";
 import { formatoFecha } from "../utils";
@@ -38,9 +39,13 @@ const calculoCodigosJornada = (
 
   let Count_Jornadas = Numero_Jornadas_No_Trabajadas;
 
-  return Codigos_Dias_Inicial.map((Codigo) =>
+  const Codigos_Jornada = Codigos_Dias_Inicial.map((Codigo) =>
     Codigo === null && Count_Jornadas-- > 0 ? Codigos.Jornada["X"] : Codigo
   );
+
+  generateTSV([Codigos_Jornada.map((_, i) => i + 1), Codigos_Jornada]);
+
+  return Codigos_Jornada;
 };
 
 const codigosAIntervalos = (
