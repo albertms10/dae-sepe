@@ -10,7 +10,7 @@ export default (archivo: string) => {
 
   try {
     data = fs.readFileSync(
-      path.resolve(checkDirExists("../../../input"), `${archivo}.txt`)
+      path.resolve(checkDirExists("../../input"), `${archivo}.txt`)
     );
   } catch (e) {
     console.error(e);

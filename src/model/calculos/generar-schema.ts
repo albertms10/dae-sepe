@@ -1,3 +1,4 @@
+/// <reference path="../../interfaces/xml.schema.d.ts" />
 import { Info } from "xml:schema";
 import { fechaFinalMes, fechaInicioMes, formatoFecha } from "../../utils";
 import { Meses } from "../codigos";

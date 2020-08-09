@@ -7,7 +7,7 @@ import { checkDirExists } from "./index";
  */
 export default (Datos: any[][]) => {
   fs.writeFile(
-    path.resolve(checkDirExists("../../../output"), "output.tsv"),
+    path.resolve(checkDirExists("../../output"), "output.tsv"),
     Datos.map((Dato) => Dato.toString().replace(/,/g, "\t")).join("\n"),
     (err) => {
       if (err) console.error(err);

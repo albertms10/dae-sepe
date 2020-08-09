@@ -9,7 +9,7 @@ import { checkDirExists, prepareXML } from "./index";
  */
 export default (Datos: XML.Datos) => {
   fs.writeFile(
-    path.resolve(checkDirExists("../../../output"), "output.xml"),
+    path.resolve(checkDirExists("../../output"), "output.xml"),
     js2xml(prepareXML(Datos), {
       compact: true,
       fullTagEmptyElement: true,
