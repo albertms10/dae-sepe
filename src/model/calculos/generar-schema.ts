@@ -9,7 +9,7 @@ export default (
   { Representante, Empresa, Trabajador, Mes }: Info,
   Horas_Ordinarias: (number | null)[]
 ) => {
-  const Fecha = new Date(2020, parseInt(Meses[Mes]));
+  const Fecha = new Date(2020, Meses[Mes]);
 
   return {
     Datos_Representante: new Model.Representante(
