@@ -5,15 +5,16 @@ import { checkDirExists } from "./index";
 /**
  * Lee e interpreta un archivo de texto.
  */
-export default () => {
+export default (archivo: string) => {
   let data: Buffer;
 
   try {
     data = fs.readFileSync(
-      path.resolve(checkDirExists("../../../input"), "input.txt")
+      path.resolve(checkDirExists("../../../input"), `${archivo}.txt`)
     );
   } catch (e) {
-    return console.error(e);
+    console.error(e);
+    return [];
   }
 
   return data
