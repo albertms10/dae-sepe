@@ -46,6 +46,6 @@ export class IntervaloActividad {
 export class Trabajador {
   constructor(
     readonly NIF_NIE: string,
-    readonly Datos_Actividad: DatosActividad
+    readonly Datos_Actividad?: DatosActividad
   ) {}
 }

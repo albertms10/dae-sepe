@@ -24,7 +24,7 @@ export default (
     Datos_Trabajador: new Model.Trabajador(
       Trabajador.NIF_NIE,
       new Model.DatosActividad(
-        Trabajador.Coeficiente_Actividad,
+        "04",
         new Model.PeriodoActividad(
           formatoFecha(fechaInicioMes(Fecha)),
           formatoFecha(fechaFinalMes(Fecha)),

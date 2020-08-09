@@ -28,7 +28,6 @@ declare module "xml:schema" {
 
   interface DatosJornada {
     Jornada_Habitual: number;
-    Coeficiente_Actividad: string;
   }
 
   interface Info {
