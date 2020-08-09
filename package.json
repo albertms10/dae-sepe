@@ -4,7 +4,8 @@
   "description": "Días de actividad equivalente — SEPE",
   "main": "dist/index.js",
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "test": "mocha -r ts-node/register test/**/*.test.ts"
   },
   "author": "Albert Mañosa",
   "license": "MIT",
