@@ -32,8 +32,9 @@ const calculoCodigosJornada = (
     Horas_No_Trabajadas.reduce((prev, curr) => (prev ?? 0) + (curr ?? 0)) ?? 0;
 
   const Numero_Jornadas_No_Trabajadas =
-    Jornada_Habitual ??
-    Math.round(Numero_Horas_No_Trabajadas / Jornada_Habitual);
+    Jornada_Habitual === 0
+      ? Jornada_Habitual
+      : Math.round(Numero_Horas_No_Trabajadas / Jornada_Habitual);
 
   let Count_Jornadas = Numero_Jornadas_No_Trabajadas;
 
