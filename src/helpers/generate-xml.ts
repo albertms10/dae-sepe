@@ -2,18 +2,14 @@ import fs from "fs";
 import path from "path";
 import { js2xml } from "xml-js";
 import * as XML from "xml:schema";
-import { prepareXML } from "./index";
+import { checkDirExists, prepareXML } from "./index";
 
 /**
  * Genera y escribe un archivo XML con los datos proporcionados.
  */
 export default (Datos: XML.Datos) => {
-  const outputPath = path.resolve(__dirname, "../../../output");
-
-  if (!fs.existsSync(outputPath)) fs.mkdirSync(outputPath);
-
   fs.writeFile(
-    path.resolve(outputPath, "output.xml"),
+    path.resolve(checkDirExists("../../../output"), "output.xml"),
     js2xml(prepareXML(Datos), {
       compact: true,
       fullTagEmptyElement: true,

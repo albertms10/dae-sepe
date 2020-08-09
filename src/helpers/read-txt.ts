@@ -1,18 +1,17 @@
-import * as path from "path";
 import * as fs from "fs";
+import * as path from "path";
+import { checkDirExists } from "./index";
 
 /**
  * Lee e interpreta un archivo de texto.
  */
 export default () => {
-  const inputPath = path.resolve(__dirname, "../../../input");
-
-  if (!fs.existsSync(inputPath)) fs.mkdirSync(inputPath);
-
-  let data;
+  let data: Buffer;
 
   try {
-    data = fs.readFileSync(path.resolve(inputPath, "input.txt"));
+    data = fs.readFileSync(
+      path.resolve(checkDirExists("../../../input"), "input.txt")
+    );
   } catch (e) {
     return console.error(e);
   }
