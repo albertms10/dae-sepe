@@ -14,7 +14,8 @@ export default (
   );
 
   const Numero_Horas_No_Trabajadas =
-    Horas_No_Trabajadas.reduce((prev, curr) => (prev ?? 0) + (curr ?? 0)) ?? 0;
+    Horas_No_Trabajadas.reduce((prev, curr) => (prev ?? 0) + (curr ?? 0), 0) ??
+    0;
 
   const Numero_Jornadas_No_Trabajadas =
     Jornada_Habitual === 0
